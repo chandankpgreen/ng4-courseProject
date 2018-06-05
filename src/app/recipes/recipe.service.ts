@@ -1,4 +1,5 @@
 import { Recipe } from "./recipe.model";
+import { EventEmitter } from "@angular/core";
 
 
 export class RecipeService {
@@ -6,6 +7,8 @@ export class RecipeService {
     new Recipe('Chicken Tikka', 'This is the recipe for Chicken tikka', 'http://www.lakesideindianrestaurant.com.au/wp-content/uploads/2017/02/chikantikka.jpg'),
     new Recipe('Paneer Tikka','This is the recipe for Paneer tikka','http://www.archanaskitchen.com//images/archanaskitchen/1-Author/Neha_Mathur/Achari_Paneer_Tikka_Recipe_Party_Food.JPG')
   ];
+
+  selectedRecipe = new EventEmitter<Recipe>();
   constructor() { }
 
   getRecipes(){
