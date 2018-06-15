@@ -7,10 +7,10 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#" (click)="showRecipes()">Recipes</a>
+                    <a href="#" (click)="showRecipes()" [routerLink]="['/recipes']">Recipes</a>
                 </li>
                 <li>
-                    <a href="#" (click)="showShoppingList()">Shopping List</a>
+                    <a href="#" (click)="showShoppingList()" [routerLink]="['/shoppinglist']">Shopping List</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

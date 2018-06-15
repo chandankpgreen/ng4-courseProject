@@ -17,7 +17,7 @@ export class DropDownDirecive implements OnInit {
 
     @HostListener('click') toggleOpen() {
      this.isOpen = !this.isOpen;
-     console.log(this.cssClass);
+     //console.log(this.cssClass);
     }
     // ngOnInit() {
     // //  this.cssClass = "";
