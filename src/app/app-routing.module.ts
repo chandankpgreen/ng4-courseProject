@@ -5,18 +5,19 @@ import { RecipeDetailComponent } from "./recipes/recipe-detail/recipe-detail.com
 import { NgModule } from "@angular/core";
 
 const appRoutes: Routes = [
+    { path: '', redirectTo: '/recipes', pathMatch: 'full' },
     {
         path: "recipes", component: RecipesComponent, children: [
             { path: ":id", component: RecipeDetailComponent }
         ]
     },
-    { path: "shoppinglist", component: ShoppingListComponent }
+    { path: "shopping-list", component: ShoppingListComponent }
 ]
 @NgModule({
-    imports:[
+    imports: [
         RouterModule.forRoot(appRoutes)
     ],
-    exports:[
+    exports: [
         RouterModule
     ]
 })
